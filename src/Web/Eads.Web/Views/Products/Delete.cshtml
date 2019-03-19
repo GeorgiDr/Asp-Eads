@@ -10,6 +10,7 @@
 <div>
     <h4>Product</h4>
     <hr />
+    <img src="data:image;base64,@System.Convert.ToBase64String(Model.Image)" style="width: 283px;height: 218px;" />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.ProductName)
@@ -22,13 +23,7 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Image)
-        </dd>
+        </dd> 
         <dt>
             @Html.DisplayNameFor(model => model.UnitPrice)
         </dt>
@@ -60,7 +55,7 @@
             @Html.DisplayFor(model => model.Subcategory.SubcategoryName)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="ProductID" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
